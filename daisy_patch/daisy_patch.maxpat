@@ -40,6 +40,229 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 1,
+							"revision" : 11,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "dsp.gen",
+						"rect" : [ 59.0, 106.0, 600.0, 450.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 204.0, 171.0, 281.0, 22.0 ],
+									"text" : "param makeup_db @min -96 @max 24 @default 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 169.0, 137.0, 287.0, 22.0 ],
+									"text" : "param freq_hz @min 10 @max 20000 @default 500"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 140.0, 105.0, 258.0, 22.0 ],
+									"text" : "param freq_amt @min 0 @max 1 @default 0.1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 104.0, 68.0, 260.0, 22.0 ],
+									"text" : "param threshold @min 0 @max 1 @default 0.5"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 122.5, 407.0, 35.0, 22.0 ],
+									"text" : "out 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 6,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 70.0, 327.0, 71.5, 22.0 ],
+									"text" : "dist_freq"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 31.0, 68.0, 28.0, 22.0 ],
+									"text" : "in 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 61.5, 68.0, 28.0, 22.0 ],
+									"text" : "in 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 70.0, 407.0, 35.0, 22.0 ],
+									"text" : "out 1"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 5 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 1 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"source" : [ "obj-5", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 2 ],
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 3 ],
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 4 ],
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 196.0, 261.0, 112.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/max-msp-gen-plugins/daisy_patch/",
+						"exportname" : "dist_freqparty"
+					}
+,
+					"text" : "gen~ dist_freqparty",
+					"varname" : "dist_freqparty"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -492,7 +715,7 @@
 ,
 					"patching_rect" : [ 196.0, 213.0, 84.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/_max_patches/daisy_patches/",
+						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/max-msp-gen-plugins/daisy_patch/",
 						"exportname" : "phasfckr"
 					}
 ,
@@ -538,7 +761,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 35.0, 79.0, 1336.0, 972.0 ],
+						"rect" : [ 34.0, 87.0, 1336.0, 972.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1584,7 +1807,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-41", 0 ],
-									"midpoints" : [ 82.5, 215.0, 41.0, 215.0, 41.0, 444.0 ],
+									"midpoints" : [ 82.5, 215.0, 41.0, 215.0, 42.5, 444.0 ],
 									"order" : 4,
 									"source" : [ "obj-1", 0 ]
 								}
@@ -2286,9 +2509,9 @@
  ]
 					}
 ,
-					"patching_rect" : [ 191.0, 144.0, 94.0, 22.0 ],
+					"patching_rect" : [ 196.0, 163.0, 94.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/_max_patches/daisy_patches/",
+						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/max-msp-gen-plugins/daisy_patch/",
 						"exportname" : "fourdelays"
 					}
 ,
@@ -2311,45 +2534,52 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "gain_mono.gendsp",
-				"bootpath" : "/_max_patches/gen",
-				"patcherrelativepath" : ".",
+				"name" : "sqrt_pan.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oopsy.ctrl.smooth3.gendsp",
-				"bootpath" : "/_max_patches/oopsy/code",
-				"patcherrelativepath" : "../oopsy/code",
+				"bootpath" : "~/Documents/Max 8/Packages/oopsy/code",
+				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sqrt_pan.gendsp",
-				"bootpath" : "/_max_patches/gen",
-				"patcherrelativepath" : ".",
+				"name" : "gain_mono.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oopsy.maxpat",
-				"bootpath" : "/_max_patches/oopsy/patchers",
-				"patcherrelativepath" : "../oopsy/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/oopsy/patchers",
+				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oopsy.snoop.js",
-				"bootpath" : "/_max_patches/oopsy/javascript",
-				"patcherrelativepath" : "../oopsy/javascript",
+				"bootpath" : "~/Documents/Max 8/Packages/oopsy/javascript",
+				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oopsy.node4max.js",
-				"bootpath" : "/_max_patches/oopsy/javascript",
-				"patcherrelativepath" : "../oopsy/javascript",
+				"bootpath" : "~/Documents/Max 8/Packages/oopsy/javascript",
+				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/javascript",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "dist_freq.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
 				"implicit" : 1
 			}
  ],

@@ -40,11 +40,11 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
+					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "signal" ],
+					"numoutlets" : 5,
+					"outlettype" : [ "signal", "signal", "signal", "signal", "signal" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -56,7 +56,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 59.0, 106.0, 600.0, 450.0 ],
+						"rect" : [ 274.0, 300.0, 946.0, 509.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -86,14 +86,168 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-7",
-									"linecount" : 2,
+									"id" : "obj-20",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 646.0, 294.0, 23.0, 22.0 ],
+									"text" : "* 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-19",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 342.0, 92.0, 243.0, 35.0 ],
-									"text" : "param threshold @min 0 @max 1 @default 0.1"
+									"patching_rect" : [ 729.0, 243.0, 115.0, 22.0 ],
+									"text" : "param ctrl4_unused"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-18",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 703.0, 207.0, 115.0, 22.0 ],
+									"text" : "param ctrl3_unused"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 703.0, 208.0, 115.0, 22.0 ],
+									"text" : "param ctrl3_unused"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-16",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 673.0, 177.0, 115.0, 22.0 ],
+									"text" : "param ctrl2_unused"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 637.0, 146.0, 115.0, 22.0 ],
+									"text" : "param ctrl1_unused"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-14",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 646.0, 352.0, 57.0, 22.0 ],
+									"text" : "out 5 cv1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 297.0, 302.0, 217.0, 22.0 ],
+									"text" : "param dry @default 1 @min 0 @max 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 297.0, 261.0, 236.0, 22.0 ],
+									"text" : "param early @default 0.5 @min 0 @max 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 297.0, 226.0, 226.0, 22.0 ],
+									"text" : "param tail @default 0.5 @min 0 @max 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 297.0, 196.0, 256.0, 22.0 ],
+									"text" : "param damping @default 0.5 @min 0 @max 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 297.0, 164.0, 270.0, 22.0 ],
+									"text" : "param revtime @default 10 @min 0.1 @max 100"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 297.0, 128.0, 265.0, 22.0 ],
+									"text" : "param bandwidth @default 0.5 @min 0 @max 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 297.0, 93.0, 279.0, 22.0 ],
+									"text" : "param roomsize @default 75 @min 0.1 @max 300"
 								}
 
 							}
@@ -103,7 +257,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 260.0, 289.0, 35.0, 22.0 ],
+									"patching_rect" : [ 201.0, 352.0, 35.0, 22.0 ],
 									"text" : "out 2"
 								}
 
@@ -112,11 +266,11 @@
 								"box" : 								{
 									"id" : "obj-5",
 									"maxclass" : "newobj",
-									"numinlets" : 3,
+									"numinlets" : 9,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 202.0, 167.0, 67.0, 22.0 ],
-									"text" : "dist_thresh"
+									"patching_rect" : [ 114.0, 268.0, 103.0, 22.0 ],
+									"text" : "gigaverb.dsp"
 								}
 
 							}
@@ -139,7 +293,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 305.0, 14.0, 28.0, 22.0 ],
+									"patching_rect" : [ 201.0, 14.0, 28.0, 22.0 ],
 									"text" : "in 2"
 								}
 
@@ -150,7 +304,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 202.0, 289.0, 35.0, 22.0 ],
+									"patching_rect" : [ 114.0, 352.0, 35.0, 22.0 ],
 									"text" : "out 1"
 								}
 
@@ -160,6 +314,280 @@
 								"patchline" : 								{
 									"destination" : [ "obj-5", 0 ],
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 5 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 6 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 7 ],
+									"source" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 8 ],
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"source" : [ "obj-18", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 1 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-14", 0 ],
+									"source" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"source" : [ "obj-5", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 2 ],
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 3 ],
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 4 ],
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 221.0, 388.0, 39.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"exportfolder" : "cupcake:/_max_patches/max-msp-gen-plugins/daisy_patch/",
+						"exportname" : "gigaverb_2edsp"
+					}
+,
+					"text" : "gen~",
+					"varname" : "gigaverb_2edsp"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 1,
+							"revision" : 11,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "dsp.gen",
+						"rect" : [ 59.0, 104.0, 600.0, 450.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 204.0, 171.0, 281.0, 22.0 ],
+									"text" : "param makeup_db @min -96 @max 24 @default 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 140.0, 105.0, 266.0, 22.0 ],
+									"text" : "param noise_amt @min 0 @max 1 @default 0.1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 104.0, 68.0, 260.0, 22.0 ],
+									"text" : "param threshold @min 0 @max 1 @default 0.5"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 122.5, 407.0, 35.0, 22.0 ],
+									"text" : "out 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 5,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 70.0, 327.0, 63.0, 22.0 ],
+									"text" : "dist_noise"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 31.0, 68.0, 28.0, 22.0 ],
+									"text" : "in 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 61.5, 68.0, 28.0, 22.0 ],
+									"text" : "in 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 70.0, 407.0, 35.0, 22.0 ],
+									"text" : "out 1"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 4 ],
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
@@ -191,17 +619,24 @@
 								}
 
 							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 3 ],
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 272.0, 114.0, 22.0 ],
+					"patching_rect" : [ 201.0, 317.0, 120.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/max-msp-gen-plugins/daisy_patch/",
-						"exportname" : "dist_threshold"
+						"exportfolder" : "cupcake:/_max_patches/max-msp-gen-plugins/daisy_patch/",
+						"exportname" : "dist_noiseparty"
 					}
 ,
-					"text" : "gen~ dist_threshold",
-					"varname" : "dist_threshold"
+					"text" : "gen~ dist_noiseparty",
+					"varname" : "dist_noiseparty"
 				}
 
 			}
@@ -314,7 +749,7 @@
 								"box" : 								{
 									"id" : "obj-5",
 									"maxclass" : "newobj",
-									"numinlets" : 6,
+									"numinlets" : 5,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 70.0, 327.0, 71.5, 22.0 ],
@@ -367,15 +802,8 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 5 ],
+									"destination" : [ "obj-5", 4 ],
 									"source" : [ "obj-10", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 1 ],
-									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -395,21 +823,21 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 2 ],
+									"destination" : [ "obj-5", 1 ],
 									"source" : [ "obj-7", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 3 ],
+									"destination" : [ "obj-5", 2 ],
 									"source" : [ "obj-8", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 4 ],
+									"destination" : [ "obj-5", 3 ],
 									"source" : [ "obj-9", 0 ]
 								}
 
@@ -417,9 +845,9 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 235.0, 112.0, 22.0 ],
+					"patching_rect" : [ 196.0, 261.0, 112.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/max-msp-gen-plugins/daisy_patch/",
+						"exportfolder" : "cupcake:/_max_patches/max-msp-gen-plugins/daisy_patch/",
 						"exportname" : "dist_freqparty"
 					}
 ,
@@ -880,9 +1308,9 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 197.0, 84.0, 22.0 ],
+					"patching_rect" : [ 196.0, 213.0, 84.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/max-msp-gen-plugins/daisy_patch/",
+						"exportfolder" : "cupcake:/_max_patches/max-msp-gen-plugins/daisy_patch/",
 						"exportname" : "phasfckr"
 					}
 ,
@@ -2676,9 +3104,9 @@
  ]
 					}
 ,
-					"patching_rect" : [ 112.0, 162.5, 94.0, 22.0 ],
+					"patching_rect" : [ 196.0, 163.0, 94.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/max-msp-gen-plugins/daisy_patch/",
+						"exportfolder" : "cupcake:/_max_patches/max-msp-gen-plugins/daisy_patch/",
 						"exportname" : "fourdelays"
 					}
 ,
@@ -2702,56 +3130,63 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "sqrt_pan.gendsp",
-				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"bootpath" : "/_max_patches/max-msp-gen-plugins/gendsp/components",
 				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oopsy.ctrl.smooth3.gendsp",
-				"bootpath" : "~/Documents/Max 8/Packages/oopsy/code",
-				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/code",
+				"bootpath" : "/_max_patches/oopsy/code",
+				"patcherrelativepath" : "../../oopsy/code",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gain_mono.gendsp",
-				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"bootpath" : "/_max_patches/max-msp-gen-plugins/gendsp/components",
 				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oopsy.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/oopsy/patchers",
-				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/patchers",
+				"bootpath" : "/_max_patches/oopsy/patchers",
+				"patcherrelativepath" : "../../oopsy/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oopsy.snoop.js",
-				"bootpath" : "~/Documents/Max 8/Packages/oopsy/javascript",
-				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/javascript",
+				"bootpath" : "/_max_patches/oopsy/javascript",
+				"patcherrelativepath" : "../../oopsy/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "oopsy.node4max.js",
-				"bootpath" : "~/Documents/Max 8/Packages/oopsy/javascript",
-				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/javascript",
+				"bootpath" : "/_max_patches/oopsy/javascript",
+				"patcherrelativepath" : "../../oopsy/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dist_freq.gendsp",
-				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"bootpath" : "/_max_patches/max-msp-gen-plugins/gendsp/components",
 				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "dist_thresh.gendsp",
-				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"name" : "dist_noise.gendsp",
+				"bootpath" : "/_max_patches/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "gigaverb.dsp.gendsp",
+				"bootpath" : "/_max_patches/max-msp-gen-plugins/gendsp/components",
 				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1

@@ -40,6 +40,32 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-10",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 618.0, 387.5, 158.0, 35.0 ],
+					"presentation_linecount" : 2,
+					"text" : "exportnotifier MODwatcher, exportcode"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patching_rect" : [ 623.0, 442.0, 137.0, 22.0 ],
+					"text" : "gen~ daisy_granular_v3"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-26",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -499,7 +525,6 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 504.0, 339.0, 178.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/Users/jeremywinters/Desktop/moddexports/",
 						"exportnotifier" : "MODwatcher"
 					}
 ,
@@ -683,7 +708,6 @@
 ,
 					"patching_rect" : [ 333.0, 378.0, 76.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/Users/jeremywinters/Desktop/moddexports/",
 						"exportnotifier" : "MODwatcher"
 					}
 ,
@@ -3604,7 +3628,6 @@
 ,
 					"patching_rect" : [ 274.0, 157.0, 87.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/Users/jeremywinters/Desktop/moddexports/",
 						"exportnotifier" : "MODwatcher"
 					}
 ,
@@ -4153,7 +4176,6 @@
 ,
 					"patching_rect" : [ 233.0, 101.0, 97.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/Users/jeremywinters/Desktop/moddexports/",
 						"exportnotifier" : "MODwatcher"
 					}
 ,
@@ -4183,7 +4205,6 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 192.0, 297.0, 135.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/Users/jeremywinters/Desktop/moddexports/",
 						"exportnotifier" : "MODwatcher"
 					}
 ,
@@ -4438,7 +4459,6 @@
 ,
 					"patching_rect" : [ 470.0, 185.0, 105.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/Users/jeremywinters/Desktop/moddexports/",
 						"exportnotifier" : "MODwatcher"
 					}
 ,
@@ -5000,7 +5020,6 @@
 ,
 					"patching_rect" : [ 53.0, 132.0, 110.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "cupcake:/Users/jeremywinters/Desktop/moddexports/",
 						"exportnotifier" : "MODwatcher"
 					}
 ,
@@ -5010,6 +5029,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-11", 0 ]
@@ -5040,22 +5066,92 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "rnd_stereo_space.gendsp",
-				"bootpath" : "/_max_patches/gen",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gain_mono.gendsp",
-				"bootpath" : "/_max_patches/gen",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sqrt_pan.gendsp",
-				"bootpath" : "/_max_patches/gen",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "daisy_granular_v3.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "flexible_sample_counter.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "four_grain_pitched_playback.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "up_edge_detect.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pitched_gran_playback.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "midi_note_phasor_speed.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "window_sqrt.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "oopsy.ctrl.smooth3.gendsp",
+				"bootpath" : "~/Documents/Max 8/Packages/oopsy/code",
+				"patcherrelativepath" : "../../../Max 8/Packages/oopsy/code",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "gain_stereo.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
+				"type" : "gDSP",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "slide_gain_mono.gendsp",
+				"bootpath" : "~/Documents/personal/max-msp-gen-plugins/gendsp/components",
+				"patcherrelativepath" : "../gendsp/components",
 				"type" : "gDSP",
 				"implicit" : 1
 			}

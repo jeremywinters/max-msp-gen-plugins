@@ -86,12 +86,72 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-31",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 105.0, 388.0, 29.5, 22.0 ],
+									"text" : "+"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-29",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 193.0, 207.0, 63.0, 22.0 ],
+									"text" : "slide 2000"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-28",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 180.0, 164.0, 39.0, 22.0 ],
+									"text" : "dbtoa"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-27",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 44.0, 320.0, 29.5, 22.0 ],
+									"text" : "*"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-26",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 99.0, 320.0, 74.0, 22.0 ],
+									"text" : "delay 48000"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-25",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 105.0, 302.0, 47.0, 22.0 ],
+									"patching_rect" : [ 99.0, 282.0, 47.0, 22.0 ],
 									"text" : "* 0.125"
 								}
 
@@ -151,7 +211,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 225.5, 378.0, 192.0, 47.0 ],
+									"patching_rect" : [ 304.5, 444.0, 192.0, 47.0 ],
 									"text" : "LED outputs range -1 to 1; where output will be green when positive and red when negative"
 								}
 
@@ -162,7 +222,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 289.0, 350.0, 61.0, 22.0 ],
+									"patching_rect" : [ 368.0, 416.0, 61.0, 22.0 ],
 									"text" : "out 4 led2"
 								}
 
@@ -173,7 +233,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 225.5, 350.0, 61.0, 22.0 ],
+									"patching_rect" : [ 304.5, 416.0, 61.0, 22.0 ],
 									"text" : "out 3 led1"
 								}
 
@@ -256,7 +316,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 9.5, 350.0, 69.0, 20.0 ],
+									"patching_rect" : [ 0.5, 416.0, 69.0, 20.0 ],
 									"text" : "OUTPUTS"
 								}
 
@@ -383,7 +443,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 158.5, 350.0, 35.0, 22.0 ],
+									"patching_rect" : [ 163.5, 435.0, 35.0, 22.0 ],
 									"text" : "out 2"
 								}
 
@@ -406,13 +466,20 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 117.5, 350.0, 35.0, 22.0 ],
+									"patching_rect" : [ 96.25, 435.0, 35.0, 22.0 ],
 									"text" : "out 1"
 								}
 
 							}
  ],
 						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-28", 0 ],
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-22", 0 ],
 									"source" : [ "obj-16", 0 ]
@@ -449,7 +516,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
+									"destination" : [ "obj-26", 0 ],
 									"order" : 1,
 									"source" : [ "obj-25", 0 ]
 								}
@@ -457,7 +524,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 0 ],
+									"destination" : [ "obj-31", 0 ],
 									"order" : 0,
 									"source" : [ "obj-25", 0 ]
 								}
@@ -465,7 +532,62 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-27", 0 ],
+									"midpoints" : [ 108.5, 373.0, 31.0, 373.0, 31.0, 301.0, 53.5, 301.0 ],
+									"source" : [ "obj-26", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-26", 0 ],
+									"midpoints" : [ 53.5, 355.0, 88.0, 355.0, 88.0, 312.0, 108.5, 312.0 ],
+									"order" : 1,
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-31", 1 ],
+									"order" : 0,
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-27", 1 ],
+									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-22", 1 ],
+									"source" : [ "obj-29", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"order" : 1,
+									"source" : [ "obj-31", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"order" : 0,
+									"source" : [ "obj-31", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-29", 0 ],
 									"source" : [ "obj-7", 0 ]
 								}
 
@@ -475,7 +597,7 @@
 ,
 					"patching_rect" : [ 18.0, 267.0, 137.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/oopsy/templates/",
+						"exportfolder" : "Macintosh HD:/Users/wintjer/Documents/personal/max-msp-gen-plugins/daisy_pod/",
 						"exportname" : "oopsy_pod"
 					}
 ,
